@@ -2,7 +2,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftWebSocket"
+    name: "SwiftWebSocket",
+    platforms: [
+        .iOS(.v13),
+    ],
     products: [
         .library(
             name: "SwiftWebSocket",
@@ -11,6 +14,7 @@ let package = Package(
         targets: [
         .target(
             name: "SwiftWebSocket-iOS",
-            dependencies: []),
+            dependencies: [],
+	    path: "Source"),
     ]
 )
